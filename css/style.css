@@ -144,7 +144,7 @@ body {
   margin: 0em;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 576px) {
   .header__heading {
     font-size: 2rem;
   }
@@ -155,7 +155,7 @@ body {
     padding: 1.5em 1.2em;
   }
 }
-@media (min-width: 375px) {
+@media (min-width: 576px) {
   .nav-mobile {
     display: none;
   }

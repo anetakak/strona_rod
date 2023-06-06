@@ -148,7 +148,7 @@ background-image: linear-gradient(0deg, #A3A847 10%, rgba(255, 255, 255, 0) 90%)
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 576px) {
 	.header__heading {
 		font-size: 2rem;
 	}
@@ -160,7 +160,7 @@ background-image: linear-gradient(0deg, #A3A847 10%, rgba(255, 255, 255, 0) 90%)
     }
 }
 
-@media (min-width: 375px) {
+@media (min-width: 576px) {
 	.nav-mobile {
 		display: none;
 	}
