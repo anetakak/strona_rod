@@ -1,15 +1,16 @@
-const burgerBtn = document.querySelector('.nav-mobile__btn')
-const nav = document.querySelector('.nav')
-const navBox = document.querySelector('.nav-mobile__box')
-const navItems = document.querySelectorAll('.nav-mobile-item')
+const burgerBtn = document.querySelector('.nav__burger')
+const navBox = document.querySelector('.nav__box')
+const footerYear = document.querySelector(".footer__year")
 
 const showNav = () => {
-    navBox.style.display = 'flex'
+    navBox.classList.toggle('nav__box--visible')
+    console.log('ok');
 }
 
-const closeNav = () => {
-    navBox.style.display = 'none'
+const handleCurrentYear = () => {
+    const year = (new Date).getFullYear();
+    footerYear.innerText = year;
 }
 
+handleCurrentYear();
 burgerBtn.addEventListener('click', showNav)
-navItems.forEach(item => item.addEventListener('click', closeNav))
