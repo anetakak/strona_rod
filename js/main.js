@@ -21,4 +21,3 @@ const handleCurrentYear = () => {
 
 handleCurrentYear();
 burgerBtn.addEventListener('click', showNav)
-navItems.addEventListener('click', closeNav)

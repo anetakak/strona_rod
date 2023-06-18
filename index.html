@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Montserrat:wght@200;400;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/030dda2635.js" crossorigin="anonymous"></script>
 </head>
@@ -17,9 +18,9 @@
 <body>
     <header class="header">
         <div class="header-bg"></div>
-        <h1 class="header__heading">Rodzinny Ogród Działkowy<br><span>"Pod Skarpą"</span>
+        <!-- <h1 class="header__heading">Rodzinny Ogród Działkowy<br><span>"Pod Skarpą"</span>
             <br> w Warszawie
-        </h1>
+        </h1> -->
     </header>
 
     <nav class="nav">
@@ -39,6 +40,10 @@
                 <h2 class="section__heading">Ogród</h2>
                 <hr>
                 </hr>
+                <div class="gallery">
+                    <div class="gallery__item"><img src="img/gallery/one.jpg" alt="roślina kwitnąca na różowo"></div>
+                    <div  class="gallery__item"><img src="img/gallery/two.jpg" alt="roślina kwitnąca na fioletowo"></div>
+                  </div>
                 <p class="section__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates fugiat
                     earum
                     qui? Excepturi quidem perspiciatis eaque, numquam consectetur ratione quo. Distinctio, mollitia
@@ -62,13 +67,56 @@
                     qui? Excepturi quidem perspiciatis eaque, numquam consectetur ratione quo.</p>
             </div>
         </section>
-        <section class="section" id="payments">
+        <section class="section payments" id="payments">
             <div class="wrapper">
                 <h2 class="section__heading">Opłaty</h2>
                 <hr>
                 </hr>
-                <p class="section__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita repellendus accusamus porro, qui aut ipsa minima architecto deserunt, perspiciatis veritatis atque? Iure nihil consequatur illum eum veniam ipsa vero recusandae?</p>
-            </div>
+                <h3>Opłaty obowiązujące w roku 2023:</h3>
+                <table class="table">
+                    <tr>
+                        <td>1.</td>
+                        <td>Opłata drogowa</td>
+                        <td>0,80 zł/m<sup>2</sup></td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>Opłata śmieciowa</td>
+                        <td>0,70 zł/m<sup>2</sup></td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>Opłata członkowska (obligatoryjna)</td>
+                        <td>6,00 zł od działki</td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>Opłata partycypacyjna</td>
+                        <td>0,16 zł/m<sup>2</sup></td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td>Opłata elektryczna (wg wskazań licznika)</td>
+                        <td>0,75 zł/kWh</td>
+                    </tr>
+                    <tr>
+                        <td>6.</td>
+                        <td>Opłata za wodę (wg wskazań wodomierza)</td>
+                        <td>3,99 zł/m<sup>3</sup></td>
+                    </tr>
+                    <tr>
+                        <td>7.</td>
+                        <td>Opłata inwestycyjna jednorazowa wnoszona w roku nabycia prawa do działki przez nowych
+                            działkowiczów</td>
+                        <td>1500,00 zł</td>
+                    </tr>
+                    <tr>
+                        <td>8.</td>
+                        <td>Opłata ogrodowa jednorazowa wnoszona w roku nabycia prawa do działki przez nowych
+                            działkowiczów</td>
+                        <td>600,00 zł</td>
+                    </tr>
+                </table>
         </section>
         <section class="section contact" id="contact">
             <div class="wrapper">
@@ -78,39 +126,89 @@
                 <div class="contact__box">
                     <div class="contact__box-one">
                         <h3>Zarząd:</h3>
-                        <table>
+                        <table class="table">
                             <tr>
                                 <th>Prezes ROD</th>
-                                <td>Jan Kowalski</td>
-                                <td><i class="fa-solid fa-phone"></i> 111-111-111</td>
+                                <td>Mieczysław Pechacz</td>
+                                <td><i class="fa-solid fa-phone"></i><span class="nowrap">690-010-158</span></td>
+                                <td>Działka 45A</td>
                             </tr>
                             <tr>
-                                <th>Zastępca Prezesa</th>
-                                <td>Jan Nowak</td>
-                                <td><i class="fa-solid fa-phone"></i> 222-222-222</td>
+                                <th>Wiceprezes</th>
+                                <td>Mieczysław Kozielewski</td>
+                                <td><i class="fa-solid fa-phone"></i><span class="nowrap">507-036-886</span></td>
+                                <td>Działka 49</td>
+                            </tr>
+                            <tr>
+                                <th>Sekretarz</th>
+                                <td>Anna Malinowska</td>
+                                <td><i class="fa-solid fa-phone"></i><span class="nowrap">501-745-984</span></td>
+                                <td>Działka 18</td>
                             </tr>
                             <tr>
                                 <th>Skarbnik</th>
-                                <td>Ktoś Tam</td>
-                                <td><i class="fa-solid fa-phone"></i> 333-333-333</td>
+                                <td>Karolina Kamerdyn-Góra</td>
+                                <td><i class="fa-solid fa-phone"></i><span class="nowrap">503-655-004</span></td>
+                                <td>Działka 76</td>
+                            </tr>
+                            <tr>
+                                <th>Skarbnik</th>
+                                <td>Mieczysław Wierzbicki</td>
+                                <td><i class="fa-solid fa-phone"></i><span class="nowrap">601-190-632</span></td>
+                                <td>Działka 21</td>
+                            </tr>
+                            <tr>
+                                <th>Skarbnik</th>
+                                <td>Grzegorz Kopeć</td>
+                                <td><i class="fa-solid fa-phone"></i><span class="nowrap">698-187-762</span></td>
+                                <td>Działka 48</td>
+                            </tr>
+                            <tr>
+                                <th>Skarbnik</th>
+                                <td>Barbara Ozga</td>
+                                <td><i class="fa-solid fa-phone"></i><span class="nowrap">501-082-428</span></td>
+                                <td>Działka 69</td>
                             </tr>
                         </table>
+                        <p class="section__text"><strong>Zapytania i uwagi można kierować do prezesa zarządu ROD "Pod
+                                Skarpą" na adres e-mail: prezes.rod.skarpa@gmail.com</strong></p>
                         <h3>Przydatne kontakty:</h3>
-                        <table>
+                        <table class="table">
                             <tr>
-                                <th>Hydraulik</th>
-                                <td>Jan Kowalski</td>
-                                <td><i class="fa-solid fa-phone"></i> 111-111-111</td>
+                                <th>Gospodarz ogrodu</th>
+                                <td>Walenty Karpiuk</td>
+                                <td><i class="fa-solid fa-phone"></i><span class="nowrap">510-349-318</span></td>
+                                <td>Działka 20</td>
                             </tr>
                             <tr>
-                                <th>Elektryk</th>
-                                <td>Jan Nowak</td>
-                                <td><i class="fa-solid fa-phone"></i> 222-222-222</td>
+                                <th>Hydraulik ogrodu</th>
+                                <td>Wojciech Śniadała</td>
+                                <td><i class="fa-solid fa-phone"></i><span class="nowrap">785-664-557</span></td>
+                                <td>Działka 86</td>
                             </tr>
                             <tr>
-                                <th>????</th>
-                                <td>Ktoś Tam</td>
-                                <td><i class="fa-solid fa-phone"></i> 333-333-333</td>
+                                <th>Elektryk ogrodu</th>
+                                <td>Leszek Żbikowski</td>
+                                <td><i class="fa-solid fa-phone"></i><span class="nowrap">602-119-545</span></td>
+                                <td>Działka 84</td>
+                            </tr>
+                        </table>
+                        <h3>Komisja rewizyjna ROD "Pod Skarpą":</h3>
+                        <table class="table">
+                            <tr>
+                                <td>Łukasz Serdyński</td>
+                                <td><i class="fa-solid fa-phone"></i><span class="nowrap">602-205-291</span></td>
+                                <td>Działka 33A</td>
+                            </tr>
+                            <tr>
+                                <td>Karolina Maciejewska</td>
+                                <td><i class="fa-solid fa-phone"></i><span class="nowrap">884-608-024</span></td>
+                                <td>Działka 77</td>
+                            </tr>
+                            <tr>
+                                <td>Szymon Krzyszczuk</td>
+                                <td><i class="fa-solid fa-phone"></i><span class="nowrap">501-454-404</span></td>
+                                <td>Działka 3A</td>
                             </tr>
                         </table>
                     </div>
@@ -119,7 +217,7 @@
                         <h3>Nasz ogród mieści się tutaj:</h3>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9783.12784459054!2d21.031398!3d52.1928359!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecd9ed5d5ef81%3A0x737808eabe855b70!2zUm9kemlubnkgT2dyw7NkIER6aWHFgmtvd3kgIlBPRCBTS0FSUMSEIg!5e0!3m2!1spl!2spl!4v1686316951965!5m2!1spl!2spl"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
@@ -130,7 +228,11 @@
     <footer class="footer">
         <p class="footer__text">&copy; <span class="footer__year"></span> ROD "Pod Skarpą"</p>
     </footer>
-    <script src="main.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

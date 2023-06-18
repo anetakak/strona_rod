@@ -13,7 +13,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
   color: #000;
-  background-color: #ddd;
+  background-color: #dddddd;
 }
 
 .header {
@@ -22,8 +22,8 @@ body {
   align-items: flex-end;
   position: relative;
   height: 40vh;
-  background-image: url("../img/flowers.jpg");
-  background-position-y: 40%;
+  background-image: url("../img/tlo1.png");
+  background-position: center;
   background-size: cover;
   z-index: 10;
 }
@@ -33,7 +33,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(0deg, #004e1a 10%, rgba(255, 255, 255, 0) 100%);
+  background-image: linear-gradient(0deg, #004e39 5%, rgba(255, 255, 255, 0) 50%);
   z-index: -1;
 }
 .header__heading {
@@ -41,7 +41,7 @@ body {
   font-family: "Francois One", cursive;
   text-align: center;
   font-size: 4rem;
-  color: #ddd;
+  color: #dddddd;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 .header__heading span {
@@ -54,7 +54,8 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  background-color: #004e1a;
+  margin-bottom: 1.2em;
+  background-color: #004e39;
   box-shadow: 0 0 10px #003b14;
 }
 .nav::before {
@@ -79,7 +80,7 @@ body {
 }
 .nav__box a {
   text-decoration: none;
-  color: #ddd;
+  color: #dddddd;
 }
 .nav__item {
   position: relative;
@@ -95,7 +96,7 @@ body {
   transform: translateX(-50%);
   height: 1px;
   width: 0;
-  background-color: #ddd;
+  background-color: #dddddd;
   transition: width 0.3s;
 }
 .nav__item:hover::after {
@@ -108,7 +109,7 @@ body {
   padding: 0.7em;
   outline: none;
   font-size: 2.5rem;
-  color: #ddd;
+  color: #dddddd;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -125,14 +126,14 @@ body {
 .section {
   display: flex;
   justify-content: center;
-  padding: 1.5em 2em;
+  padding: 0.5em 2em;
 }
 .section__heading {
   margin-bottom: 0.3em;
   color: #003b14;
 }
 .section h3 {
-  margin: 1em 0;
+  margin: 1em;
   color: #003b14;
 }
 .section__text {
@@ -141,65 +142,86 @@ body {
 .section__link {
   padding: 1em;
   text-decoration: none;
-  color: #004e1a;
+  color: #004e39;
   transition: color 0.3s;
 }
 .section__link:hover {
   color: #00a637;
 }
 
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+}
+.gallery__item {
+  padding: 1em;
+}
+
+.slick-prev,
+.slick-next {
+  margin: 0.7em;
+  color: #004e39;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.table {
+  border-collapse: collapse;
+}
+.table td {
+  padding: 0.5em 0.3em;
+}
+.table td .nowrap {
+  white-space: nowrap;
+}
+.table tr:nth-child(odd) {
+  background-color: #eeeeee;
+}
+.table th,
+.table i {
+  padding: 0.2em;
+  color: #003b14;
+}
+
 .contact__box {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
+  gap: 0.7em;
 }
 .contact__box-one {
   display: inline-flex;
   flex-direction: column;
-  align-items: center;
-  flex-grow: 1;
-  padding: 0 2em;
+  align-items: flex-start;
+  flex-grow: 2;
+  flex-basis: 50%;
 }
-.contact__box-one h3 {
-  border-bottom: 1px solid #003b14;
-}
-.contact__box-one table {
-  -moz-text-align-last: left;
-       text-align-last: left;
-}
-.contact__box-one tr {
-  height: 3em;
-}
-.contact__box-one th {
-  color: #003b14;
-}
-.contact__box-one td {
-  padding: 0 1em;
-}
-.contact__box-one td i {
+.contact__box-one strong {
   color: #003b14;
 }
 .contact__box-two {
   display: inline-flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   flex-grow: 1;
-  padding: 0 1em;
 }
 .contact__box-two iframe {
-  width: 600px;
-  height: 450px;
+  margin-bottom: 1em;
+  width: 450px;
+  height: 300px;
 }
 
 .footer {
   height: 3em;
   width: 100%;
   box-shadow: 0 0 10px #003b14;
-  background-color: #004e1a;
+  background-color: #004e39;
 }
 .footer__text {
   padding: 0.8em;
-  color: #ddd;
+  color: #dddddd;
   text-align: center;
 }
 
@@ -215,7 +237,13 @@ body {
     display: flex;
   }
   .section {
-    padding: 1.5em 1.2em;
+    padding: 0.3em 0.3em;
+  }
+  .section__text {
+    padding: 0 0.5em;
+  }
+  .contact__box-one table {
+    font-size: 1.3rem;
   }
   .contact__box-two {
     display: none;
@@ -226,9 +254,8 @@ body {
     display: none;
   }
 }
-@media (max-width: 768px) {
-  .contact__box-two iframe {
-    width: 450px;
-    height: 300px;
+@media (min-width: 768px) {
+  body {
+    font-size: 1.8rem;
   }
 }/*# sourceMappingURL=style.css.map */
