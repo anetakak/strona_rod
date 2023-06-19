@@ -119,6 +119,7 @@ body {
 }
 
 .wrapper {
+  margin: 0 auto;
   width: 100%;
   max-width: 1200px;
 }
@@ -149,14 +150,22 @@ body {
   color: #00a637;
 }
 
+.garden__box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .gallery {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 700px;
+  max-width: 700px;
 }
 .gallery__item {
   padding: 1em;
+  margin: 1em;
+  background-color: #fff;
 }
 
 .slick-prev,
