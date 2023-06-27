@@ -1,17 +1,17 @@
 $(document).ready(function () {
-    $('.gallery').slick({
+    $('.garden__slider-area').slick({
+        lazyLoad: 'ondemand',
+        infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 3000,
         mobileFirst: true,
-        arrows: false,
         responsive: [{
-            breakpoint: 700,
+            breakpoint: 992,
             settings: {
-                arrows: true,
-                prevArrow: `<i class="slick-prev fa-solid fa-circle-arrow-left"></i>`,
-                nextArrow: `<i class="slick-next fa-solid fa-circle-arrow-right"></i>`
+                slidesToShow: 2,
+                slidesToScroll: 1
             }
         }],
 
